@@ -1,0 +1,19 @@
+{
+  "name": "MyLink",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "A custom Link.",
+   "icons": {
+      "128": "128.png"
+   },
+   "app": {
+      "launch": {
+         "container": "tab",
+         "web_url": "http://www.youtube.com/"
+      },
+      "web_content": {
+         "enabled": true,
+         "origin": "http://www.youtube.com"
+      }
+   }
+}
