@@ -1,1 +1,7 @@
 Thumbs.db
+/vendor/
+.buildpath
+.project
+.settings
+composer.phar
+composer.lock

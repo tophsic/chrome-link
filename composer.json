@@ -1,0 +1,17 @@
+{
+    "name": "tophsic/mylink",
+    "description": "Create Link Chrome extension",
+    "authors": [
+        {
+            "name": "Christophe Sicard",
+            "email": "sicard.christophe@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {"MyLink": "src/"}
+    },
+    "require": {
+        "symfony/console": "2.3.*@dev"
+    }
+}
