@@ -8,6 +8,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use MyLink\Manifest;
+use MyLink\Extension;
 
 $console = new Application();
 
@@ -71,6 +72,19 @@ $console
 			'description' => $input->getArgument('description'),
 			'url' => $input->getArgument('url')
 		));
+		$output->writeln('Done');
+	})
+	;
+
+$console
+	->register('export')
+	->setDefinition(array(
+			new InputArgument('path', InputArgument::REQUIRED, 'Path'),
+	))
+	->setDescription('Change name of the extension')
+	->setCode(function (InputInterface $input, OutputInterface $output) {
+		$extension = new Extension(__DIR__ . DIRECTORY_SEPARATOR . '..', $input->getArgument('path'));
+		$extension->export();
 		$output->writeln('Done');
 	})
 	;

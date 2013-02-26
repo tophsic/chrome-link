@@ -67,6 +67,11 @@ class Manifest
 	{
 		$this->json->name = (string) $name;
 	}
+	
+	public function getName()
+	{
+		return $this->json->name;
+	}
 
 	protected function setDescription($description)
 	{
